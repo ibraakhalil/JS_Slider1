@@ -24,29 +24,18 @@ let array = [
 ]
 
 
-
-
-
-
-
-
 for (let i = 0; i < array.length; i++){
 
     // এই মাধ্যমে array যতগুলা হবে স্লাইডারের dot ও ততগুলা হবে
-
      let dotDiv = document.createElement("div");
         dotDiv.setAttribute("class","dot")
     dotsWrapper.append(dotDiv);
 
     // স্লাইডারের dot ক্লিক করলে এর মাধ্যমে স্লাইড চেঞ্জ হবে
-
     dots()[i].addEventListener("click",function(){
         myfunc(counter = i);
     })
 }
-
-
-
 
 function myfunc(index) {
 
@@ -73,7 +62,7 @@ function myfunc(index) {
                 index++;
                 if(index > array.length-1) {index = 0 ;}
             }
-            img.setAttribute("src",`./photo/${array[index].img}`)
+            img.setAttribute("src",`./Photo/${array[index].img}`)
             img.setAttribute("class","fade")
             p.setAttribute("class","fadeP")
             p.innerText = array[index].para;
@@ -82,30 +71,10 @@ function myfunc(index) {
     })
     
 // এটা আরেকবার বাইরে না দিলে পেজ রিলোডের সময় স্লাইডারে প্রথমবার কিছু থাকেনা
-img.setAttribute("src",`./photo/${array[index].img}`)
+img.setAttribute("src",`./Photo/${array[index].img}`)
 p.innerText = array[index].para;
 dotStyle(); 
-
 }
  
 myfunc(counter)
-
-        
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
